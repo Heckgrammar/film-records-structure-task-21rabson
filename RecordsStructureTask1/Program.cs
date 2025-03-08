@@ -32,7 +32,19 @@
             // Produce one output to say the name of the newest film
 
             // Write the code to update the andMan record to show the film is currently being shown
-
+            int newest = 0;
+            int index = 0;
+            for (int i = 0; i < filmCollection.Length; i++) 
+            {
+                if (filmCollection[i].year > newest)
+                {
+                    newest = filmCollection[i].year;
+                    index = i;
+                }
+            }
+            Console.WriteLine(filmCollection[index].title);
+            filmCollection[0].beingShown = true;
+            
 
         }
     }
